@@ -1,0 +1,9 @@
+//instead of customizing the main source of sass files directly u can make a copy that will be compiled instead of the original source and customize it but above of import cause u reedit then uses
+//u have to use !default in things u will re edit
+//will look directly into index file inside sass
+// customize theme variables
+$secondary: indigo;
+$base-padding: 1rem;
+$base-border-thickness: 3px;
+
+@import "sass";

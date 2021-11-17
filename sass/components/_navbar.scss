@@ -1,0 +1,29 @@
+//explain extends
+//diff between extends and mixin that :1) extends does not except params/args 2)extends compiled in css in nested way of class name but mixin will duplicate all props for all classes in css file
+%flex-layout {
+  //use % in case of u want only to use props of this parent without any need for it to be compiled in css
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.navbar {
+  @extend %flex-layout;
+  padding: $base-padding $base-padding * 2;
+  box-shadow: $base-box-shadow;
+  .site-title {
+    font-size: $font-size-lg;
+  }
+  .container {
+    @extend %flex-layout;
+  }
+}
+
+@each $key, $val in $colors {
+  .navbar-#{$key} {
+    @extend .navbar;
+    background-color: $val;
+  }
+}

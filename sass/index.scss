@@ -1,0 +1,23 @@
+//sass is a css superpower that allows to use logics like loop/variables/inheritance into css to make it flex ....etc
+//browser can't understand sass so u have to convert sass files into css files using compiler extension and some npm packages  npm i gulp gulp-sass sass --save -dev
+//npm install gulp -g
+//order maters
+
+// variables & functions
+@import "functions";
+@import "variables";
+
+// base & layout
+@import "base";
+@import "breakpoints";
+@import "grid";
+
+// colors
+@import "colors";
+
+// components (button, card, navbar etc)
+@import "components/card";
+@import "components/button";
+@import "components/navbar";
+// utilities (margin, padding, opacity, etc)
+@import "utilities";

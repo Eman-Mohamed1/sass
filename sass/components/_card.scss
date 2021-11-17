@@ -1,0 +1,27 @@
+@use "sass:math"; //use built in fun
+.card {
+  display: block;
+  padding: $base-padding;
+  border: $base-border-thickness solid #ddd;
+  box-shadow: $base-box-shadow;
+
+  .card-title {
+    font-size: math.div($base-font-size, 2);
+    padding-bottom: $base-padding;
+    font-weight: bold;
+  }
+  .card-body {
+    //nesting
+    font-size: $base-font-size;
+
+    a {
+      text-decoration: underline;
+    }
+  }
+}
+
+@debug "hello world"; //=console.log('hello world')
+@debug math.div(10, 3);
+@debug math.$pi;
+@debug math.floor(2.6);
+@debug math.max(1px, 20px, 15px, 12px);
